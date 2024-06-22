@@ -12,11 +12,13 @@ code {
     monospace;
 }
 .favButton{
-  background-color: rgba(136, 136, 136, 0.116);
+  background-color: rgba(136, 136, 136, 0.719);
   padding: 10px;
+  margin-bottom: 10px;
   border: none;
   width: 100%;
   cursor: pointer;
+  transition: transform 0.2s;
 }
 
 h1{
@@ -25,9 +27,44 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  height: 5vh;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
+  background-color: #ecebeb;
+}
+
+nav div {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+nav h4 {
+  font-size: 1.5rem;
+}
+
+nav a {
+  margin: 20px;
+}
+
+.themeButton {
+  background-color: #000;
+  border-radius: 5pt;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s;
+  margin-right: 10px;
+}
+
+.themeButton:active, .favButton:active {
+  transform: scale(0.85);
+}
+
+.fas.fa-moon, .fas.fa-star {
+  border-color: #000;
+  color: rgb(255, 255, 66);
 }
 
 a{
@@ -42,23 +79,50 @@ a:hover{
 
 footer {
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-around;
+  align-items: center;
   padding: 2rem;
   position: relative;
-  bottom: 0;
   width: 90%;
   height: 40px;
   margin-top: 2rem;
+  bottom: 0;
+  width: 100%;
 }
 
-footer > img{
-  width: 200px;
-  margin: 0;
+.footerHome {
+  background-color: rgb(194, 21, 21);
+  font-size: 1.5rem;
+  height: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 0;
 }
-footer > p{
+
+.footerLink {
   margin: 0;
-  padding-top: 0.7rem;
+  color: white;
+}
+
+footer a {
+  max-width: 30%;
+}
+
+footer .icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+}
+
+.icons a {
+  width: 6%;
+}
+
+.icon {
+  filter: brightness(0);
 }
 
 form{
@@ -119,4 +183,17 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+
+ img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
